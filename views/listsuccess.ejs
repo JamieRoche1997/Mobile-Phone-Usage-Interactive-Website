@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <% include partials/head %>
+  <div class="wrapper">
+    <h1><%= title %></h1>
+      <body>
+        <table class="table table-inverse">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Date</th>
+              <th>Name</th>
+              <th>Educational</th>
+              <th>Shopping</th>
+              <th>Browsing</th>
+              <th>Social Media</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% for(var i=0; i < usagelist.length; i++) { %>
+            <tr>
+              <td><%= usagelist[i]._id %></td>
+              <td><%= usagelist[i].date %></td>
+              <td><%= usagelist[i].name %></td>
+              <td><%= usagelist[i].educational_usage %></td>
+              <td><%= usagelist[i].shopping_usage %></td>
+              <td><%= usagelist[i].browsing_usage %></td>
+              <td><%= usagelist[i].socialmedia_usage %></td>
+            </tr>
+            <% } %>
+          </tbody>
+        </table>
+      </body>
+  </div>
+<% include partials/foot %>
+</html>

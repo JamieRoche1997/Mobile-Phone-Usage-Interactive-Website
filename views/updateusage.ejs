@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <% include partials/head %>
+    <div class="wrapper">
+      <h1><%= title %></h1>
+        <body>
+          <p class="instruct-success">Please use the Report Usage option to retrieve the ID.</p>
+          <div style="margin:0 auto ; width:50%; padding:20px">
+            <br>
+            <form action="/usage/update" method="POST">
+              <label>ID of usage to update:  </label>
+              <input type="text" name="_id" placeholder="634e804394f66713d5514414">
+
+              <br /> <br /> <br /> <br />
+              
+              <label>Name: </label>
+              <input type="text" name="name" placeholder="Jane Doe">
+
+              <br /> <br /><br /> <br /> 
+              
+              <label>Educational Usage: </label>
+              <input type="text" name="educational_usage" placeholder="50 minutes">
+              
+              <br /> <br /> <br /> <br />
+              
+              <label>Browsing Usage: </label>
+              <input type="text" name="shopping_usage" placeholder="120 minutes">
+              
+              <br /> <br /><br /> <br />
+              
+              <label>Shopping Usage: </label>
+              <input type="text" name="browsing_usage" placeholder="70 minutes">
+              
+              <br /> <br /> <br /> <br />
+              
+              <label>Social Media Usage: </label>
+              <input type="text" name="socialmedia_usage" placeholder="340 minutes">
+              
+              <br /> <br /> <br /> <br />
+              
+              <button>Submit</button>
+            </form>
+          </div>
+
+        </body>
+    </div>
+   <% include partials/foot %>
+
+</html>

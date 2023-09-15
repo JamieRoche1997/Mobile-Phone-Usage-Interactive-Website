@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <% include partials/head %>
+  <div class="wrapper">
+    <h1><%= title %></h1>
+    <body>
+      <table class="table table-inverse">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Date</th>
+            <th>Name</th>
+            <th>Educational</th>
+            <th>Shopping</th>
+            <th>Browsing</th>
+            <th>Social Media</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for(var i=0; i < usagelist.length; i++) { %>
+          <tr>
+            <td><%= usagelist[i]._id %></td>
+            <td><%= usagelist[i].date %></td>
+            <td><%= usagelist[i].name %></td>
+            <td><%= usagelist[i].educational_usage %></td>
+            <td><%= usagelist[i].shopping_usage %></td>
+            <td><%= usagelist[i].browsing_usage %></td>
+            <td><%= usagelist[i].socialmedia_usage %></td>
+          </tr>
+          <% } %>
+        </tbody>      
+        <tfoot>
+            <% var education_mins = 0, shopping_mins = 0, browsing_mins = 0, socialmedia_mins = 0; %>
+            <% var education_hours = 0, shopping_hours = 0, browsing_hours = 0, socialmedia_hours = 0; %>
+            <% var education_days = 0, shopping_days = 0, browsing_days = 0, socialmedia_days = 0; %>
+
+            <% for(var i=0; i < usagelist.length; i++) { %>
+
+            <% education_mins = education_mins + usagelist[i].educational_usage %>
+            <% shopping_mins = shopping_mins + usagelist[i].shopping_usage %>
+            <% browsing_mins = browsing_mins + usagelist[i].browsing_usage %>
+            <% socialmedia_mins = socialmedia_mins + usagelist[i].socialmedia_usage %>
+
+            <% education_hours = (education_hours + usagelist[i].educational_usage / 60) %>
+            <% shopping_hours = (shopping_hours + usagelist[i].shopping_usage / 60) %>
+            <% browsing_hours = (browsing_hours + usagelist[i].browsing_usage / 60) %>
+            <% socialmedia_hours = (socialmedia_hours + usagelist[i].socialmedia_usage / 60) %>
+                
+            <% education_days = education_hours / 24 %>
+            <% shopping_days = shopping_hours / 24 %>
+            <% browsing_days = browsing_hours / 24 %>
+            <% socialmedia_days = socialmedia_hours / 24 %>
+          <% } %>
+
+          <tr><td><br></td></tr>
+          <tr>
+            <td>Total Minutes:</td>
+            <td></td>
+            <td></td>
+            <td><%= (education_mins) %></td>
+            <td><%= (shopping_mins) %></td>
+            <td><%= (browsing_mins) %></td>
+            <td><%= (socialmedia_mins) %></td>
+          </tr>
+          <tr>
+            <td>Total Hours:</td>
+            <td></td>
+            <td></td>
+            <td><%= (education_hours).toFixed(2) %></td>
+            <td><%= (shopping_hours).toFixed(2) %></td>
+            <td><%= (browsing_hours).toFixed(2) %></td>
+            <td><%= (socialmedia_hours).toFixed(2) %></td>
+          </tr>
+          <tr>
+            <td>Total Days:</td>
+            <td></td>
+            <td></td>
+            <td><%= (education_days).toFixed(2) %></td>
+            <td><%= (shopping_days).toFixed(2) %></td>
+            <td><%= (browsing_days).toFixed(2) %></td>
+            <td><%= (socialmedia_days).toFixed(2) %></td>
+          </tr>
+        </tfoot>
+      </table>
+    </body>
+  </div>
+  <% include partials/foot %>
+</html>

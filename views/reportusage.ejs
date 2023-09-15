@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <% include partials/head %>
+  <div class="wrapper">
+    <h1><%= title %></h1>
+    <body>
+      <div style="margin:0 auto ; width:50%; padding:20px">
+        <form action="/usage/report" method="POST">
+          <label>Name: </label>
+          <input type="text" name="name" placeholder="Name">
+          
+          <br /> <br /> <br /> <br />
+          
+          <label>Start Date: </label>
+          <input type="date" id="date" name="start_date">
+          
+          <br /> <br /> <br /> <br />
+          
+          <label>End Date: </label>
+          <input type="date" id="date" name="end_date">
+          
+          <br /> <br /> <br /> <br />
+          
+          <button>Submit</button>
+        </form>
+      </div>
+    </body>
+  </div>
+  <% include partials/foot %>
+</html>

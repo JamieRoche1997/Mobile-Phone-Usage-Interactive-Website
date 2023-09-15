@@ -1,0 +1,439 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+body {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #000;
+  overflow-y: scroll;
+  background: #f7f7f7;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: Nunito;
+}
+
+p.para-success{
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
+p.instruct-success{
+  font-size: 15px;
+  font-weight: bold;
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+header {
+  margin-bottom: 20px;
+  background: white;
+}
+.wrapper {
+  max-width: 970px;
+  overflow: hidden;
+  padding-left: 32px;
+  padding-right: 32px;
+  box-sizing: inherit;
+  margin-left: auto;
+  margin-right: auto;
+}
+li {
+  float: left;
+  line-height: 52px;
+  text-align: center;
+  margin: 4px 5px 2px 5px; 
+}
+li a {
+  line-height: 52px;
+  display: block;
+  height: 52px;
+  color: #666666;
+  font-weight: 600;
+  padding: 0 10px;
+  text-align: center;
+  transition: 0.5s;
+}
+a:hover {
+  background: #4F58FD; 
+  color: rgb(255, 255, 255);
+  font-weight: 800;
+  border-radius: 15px;
+}
+
+a.logo {
+  background: url(../images/usagelogo.png) no-repeat center center / cover;
+  color: transparent;
+  width: 95px;
+  height: 45px;
+  margin: 7px 0;
+  float: left;
+}
+
+ul.nv-l {
+  margin-left: 125px;
+  width: 75%;
+  padding: 2px;
+}
+
+ul.nv {
+  float: right;
+  margin-right: -10px;
+}
+.rt-wrapper {
+  margin-left: -20px;
+  margin-right: -44px;
+  overflow: auto;
+  margin-top: 20px;
+}
+.rt-b {
+  float: left;
+  width: 22%;
+  background: white;
+  border-radius: 5px;
+  min-height: 630px;
+  margin: 0 0 20px 20px;
+}
+.rt-b img {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+  height: auto;
+}
+a.rt-href {
+  display: block;
+  position: relative;
+}
+.rt-b h1 {
+  padding: 15px 15px 5px 15px;
+  font-size: 15px;
+  margin: 0;
+}
+.pr-t {
+  padding: 0 15px;
+  color: #1C76C8;
+  font-weight: 600;
+}
+.rt-b p {
+  color: #777;
+  max-height: 94px;
+  padding: 10px 15px 10px 15px;
+}
+a.add-b {
+  background: #1174CB;
+  color: white;
+  margin: 15px;
+  display: block;
+  font-weight: 600;
+  height: 37px;
+  text-align: center;
+  border-radius: 4px;
+  line-height: 37px;
+}
+.nv-b {
+  background: white;
+  display: block;
+  border-radius: 5px;
+  overflow: auto;
+  padding: 0 19px;
+}
+.nv-g {
+  padding-right: 10px;
+  color: #666666;
+}
+.nv-b a.ac {
+  border-bottom: 2px solid #1174CB;
+  font-weight: 600;
+  color: #000;
+  height: 50px;
+}
+.nv-b a {
+  font-weight: 400;
+}
+.sh-c {
+  background: url(../images/ReportUsage.png) no-repeat center 14px / 20px;
+  color: transparent;
+  height: 52px;
+  display: block;
+  margin-left: 10px;
+  width: 20px;
+}
+h1 {
+  font-size: 4em;
+  text-align: center;
+  margin-top: 30px;
+  color: #3511d4;
+}
+a.thumb-pr {
+  display: block;
+  width: 230px;
+  font-size: 2em;
+  color: white;
+  height: 230px;
+  float: left;
+  padding: 40px;
+  /* line-height: 365px; */
+  margin-bottom: 20px;
+}
+
+.ra-r {
+  /* background: red; */
+  margin-top: 20px;
+  overflow: auto;
+}
+.thumb-pr.mn {
+  width: 400px;
+  float: left;
+  background: url(../images/StandardUsage.png) no-repeat center center / cover;
+  color: rgb(0, 0, 0);
+  /* line-height: 650px; */
+  height: 480px;
+  padding: 0 30px;
+  text-align: center;
+  font-size: 3em;
+  position: relative;
+}
+
+.thumb-pr.pic {
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1em;
+  font-weight: 400px;
+  color: rgb(0, 0, 0);
+}
+
+input[type=submit]{
+  align-items: center;
+  appearance: none;
+  background-color: #3EB2FD;
+  background-image: linear-gradient(1deg, #4F58FD, #149BF3 99%);
+  background-size: calc(100% + 20px) calc(100% + 20px);
+  border-radius: 100px;
+  border-width: 0;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: CircularStd,sans-serif;
+  font-size: 1rem;
+  height: auto;
+  justify-content: center;
+  line-height: 1.5;
+  padding: 6px 20px;
+  position: relative;
+  text-align: center;
+  transition: background-color .2s,background-position .2s;
+  vertical-align: top;
+  white-space: nowrap;
+  margin-left: 120px;
+  width: 50%;
+  padding: 10px;
+}
+
+input[type=text]{
+  width:50%;
+  float: right;
+  resize: vertical;
+  padding:15px;
+  border-radius:15px;
+  border:0;
+  box-shadow:4px 4px 10px rgba(0,0,0,0.06);
+}
+
+input[type=date]{
+  width:50%;
+  float: right;
+  resize: vertical;
+  padding:15px;
+  border-radius:15px;
+  border:0;
+  box-shadow:4px 4px 10px rgba(0,0,0,0.06);
+}
+
+label {
+    font-size: 1.5em;
+    font-weight: 800px;
+    color: #4F58FD;
+}
+
+button {
+  align-items: center;
+  appearance: none;
+  background-color: #3EB2FD;
+  background-image: linear-gradient(1deg, #4F58FD, #149BF3 99%);
+  background-size: calc(100% + 20px) calc(100% + 20px);
+  border-radius: 100px;
+  border-width: 0;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: CircularStd,sans-serif;
+  font-size: 1rem;
+  height: auto;
+  justify-content: center;
+  line-height: 1.5;
+  padding: 6px 20px;
+  position: relative;
+  text-align: center;
+  transition: background-color .2s,background-position .2s;
+  vertical-align: top;
+  white-space: nowrap;
+  margin-left: 120px;
+  width: 50%;
+  padding: 10px;
+}
+
+.button:active,
+.button:focus {
+  outline: none;
+}
+
+.button:hover {
+  background-position: -20px -20px;
+  background-image: linear-gradient(1deg, #4F58FD, #149BF3 79%);
+}
+
+.button:focus:not(:active) {
+  box-shadow: rgba(40, 170, 255, 0.25) 0 0 0 .125em;
+}
+
+.thumb-pr.r-e {
+  float: right;
+  height: 480px;
+  background: url(../images/ReportUsage.png) no-repeat center center / cover;
+  width: 400px;
+  color: rgb(0, 0, 0);
+  /* line-height: 665px; */
+  padding: 0 30px;
+  text-align: center;
+  font-size: 3em;
+  position: relative;
+}
+.tp {
+  height: 400px;
+}
+
+.bt {
+  margin-top: 20px;
+}
+a.thumb-pr.c {
+  background: url(../images/ReportUsage.png)no-repeat center center / cover;
+  color: white;
+  margin: 0 20px;
+}
+a.thumb-pr.l {
+  background: url(../images/ReportUsage.png) no-repeat center center / cover;
+  color: white;
+}
+
+a.thumb-pr.r {
+  background: url(../images/ReportUsage.png) no-repeat center center / cover;
+  color: white;
+}
+p {
+  width: 500px;
+  font-weight: bold;
+  font-size: 15px;
+  text-align: center;
+}
+
+p.help {
+  width: 500px;
+  font-size: 1.5em;
+  text-align: left;
+}
+
+.artists-list {
+  margin-bottom: 10px;
+  float: left;
+  width: 29%;
+  padding: 4px 20px;
+}
+
+.container {
+  overflow: auto;
+  margin-top: 40px;
+}
+a.sh-c:hover {
+  color: transparent;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: #222;
+  width: 230px;
+  padding: 5px;
+  min-height: 100px;
+  margin-left: -200px;
+  line-height: initial;
+  margin-top: -10px;
+  z-index: 9999;
+  border-radius: 5px;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown-content a {
+  padding: 4px 15px;
+  text-decoration: none;
+  font-weight: 500;
+  /* font-size: 15px; */
+  height: auto;
+  line-height: initial;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {/*background-color: rgba(255, 255, 255, 0.05);*/color: #fff;/* color: rgba(0, 0, 0, 1); */}
+.dropdown-arrow {
+  /* content: ""; */
+  position: absolute;
+  bottom: 100%;
+  left: 225px;
+  border: 5px solid transparent;
+  border-bottom-color: #222;
+  border-top-width: 0;
+  height: 0;
+  width: 0;
+}
+.art-cart {
+  color: white;
+  display: block;
+  line-height: initial;
+  height: max-content;
+  overflow: auto;
+}
+.fr {
+  /* background: red; */
+  float: right;
+  display: block;
+  text-align: right;
+  color: white;
+  width: 100%;
+}
+
+th, td {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 40px;
+  text-align: center;
+}
